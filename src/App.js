@@ -22,7 +22,6 @@ export default function App() {
   async function handleLikeRepository(id) {
     const response = await api.post(`/repositories/${id}/like`)
     const indexRepository = repositories.findIndex(repository => repository.id === id)
-    console.log("dasda")
     repositories[indexRepository] = response.data
     setRepositories([...repositories])
   }
@@ -38,9 +37,9 @@ export default function App() {
             <View  style={styles.repositoryContainer}>
               <Text style={styles.repository}>{repository.title}</Text>
               <View style={styles.techsContainer}>
-                {repository.techs.map(repository => (
-                  <Text style={styles.tech}>
-                    {repository}
+                {repository.techs.map(tech => (
+                  <Text key={tech} style={styles.tech}>
+                    {tech}
                   </Text>
                 ))}
               </View>
@@ -50,7 +49,7 @@ export default function App() {
                   // Remember to replace "1" below with repository ID: {`repository-likes-${repository.id}`}
                   testID={`repository-likes-${repository.id}`}
                 >
-                  {repository.likes} curtida
+                  {repository.likes} curtidas
                 </Text>
               </View>
               <TouchableOpacity
