@@ -3,9 +3,7 @@
 ## Sobre 
 A aplicação armazena repositórios do seu portfólio, interface do backend [Conceitos Node](https://github.com/brunoOGA/desafio-conceito-node).
 
----
-## Tecnologias utilizadas
-- [Node](https://nodejs.org/en/)
+
 ---
 ## Funcionalidades da aplicação
 
@@ -13,6 +11,9 @@ A aplicação armazena repositórios do seu portfólio, interface do backend [Co
 
 - Curtir um repositório listado da API: curtir um item na sua API através de um botão com o texto Curtir e deve atualizar o número de likes na listagem no mobile.
 
+---
+## Tecnologias utilizadas
+- [React Native](https://reactnative.dev/)
 ---
 ## Como baixar o projeto 
 
